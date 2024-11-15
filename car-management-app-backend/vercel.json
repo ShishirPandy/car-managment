@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "car-management-app-backend/Backend/server.js", 
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "car-management-app-backend/Backend/server.js" 
+      }
+    ],
+    "env": {
+        "MONGO_URI": "mongodb+srv://shishir:987654321@cluster0.r2wnp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "JWT_SECRET": "8e9de84eae775de7c22f84e25a385aa5a69493a88ce14d2bc5bb7030c5b424e2925258ecd74e6e8431328bd402a90175ca863aeb34bf2455c3e5395559135056"
+    }
+}
+  
